@@ -1,0 +1,66 @@
+.keyboard {
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+  border: 1px solid #b4b4b4;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+}
+
+.row {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  column-gap: 8px;
+  list-style: none;
+  width: 100%;
+}
+
+.key {
+  min-width: 45px;
+  min-height: 45px;
+  padding: 10px;
+  box-shadow: 0 5px 1px 0 $dark_purplish_purple,
+    1px 0px 1px 0 $dark_purplish_purple,
+    -1px 0px 1px 0 $dark_purplish_purple;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 20px;
+  color: black;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $blue;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(3px);
+  }
+
+  &-control {
+    flex-grow: 1;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+}
+
+.active {
+  box-shadow: none;
+  transform: translateY(3px);
+  background-color: $blue;
+}
+
+#ArrowLeft,
+#ArrowRight,
+#ArrowDown,
+#ArrowUp {
+  flex-grow: 0;
+}
+
+#Space {
+  flex-grow: 24;
+}
